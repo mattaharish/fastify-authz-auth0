@@ -1,0 +1,63 @@
+{
+  "name": "@cmp/auth0-fastify-plugin",
+  "version": "0.0.1",
+  "description": "Auth0 library to get token data and extract roles and permissions",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://fala.cl/corp-marketplace/npm-packages/auth0-fastify-plugin.git"
+  },
+  "jest": {
+    "clearMocks": true,
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "LOG_LEVEL=silent jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^6.3.0",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-jest": "^22.16.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "jest": "^24.7.1",
+    "prettier-eslint": "^9.0.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "es6": true,
+      "jest/globals": true,
+      "node": true
+    },
+    "plugins": [
+      "jest",
+      "prettier"
+    ],
+    "extends": [
+      "plugin:prettier/recommended",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2018
+    }
+  },
+  "eslintIgnore": [
+    "node_modules/*",
+    "coverage/*",
+    ".nyc_output/*"
+  ],
+  "publishConfig": {
+    "@cmp:registry": "https://fala.cl/npm/"
+  },
+  "dependencies": {
+    "env-schema": "^1.0.0",
+    "fastify": "^2.8.0",
+    "fastify-plugin": "^1.6.0",
+    "jsonwebtoken": "^8.5.1"
+  }
+}
