@@ -34,10 +34,4 @@ function authZ(permissions, options) {
   return Authorizaton.bind({ permissions, options });
 }
 
-// function authPlugin(fastify, options, next) {
-//   fastify.decorate('auth', authZ);
-//   next();
-// }
-
-// module.exports = fp(authPlugin, { name: 'cmp-authZ' });
 module.exports = { authZ };
