@@ -1,3 +1,9 @@
-const Authorization = require('./src/auth/index');
+const fp = require('fastify-plugin');
+const { authZ } = require('./src/auth');
 
-module.exports = Authorization;
+function authPlugin(fastify, options, next) {
+  fastify.decorate('auth', authZ);
+  next();
+}
+
+module.exports = fp(authPlugin, { name: 'cmp-authZ' });

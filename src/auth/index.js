@@ -1,12 +1,12 @@
-const fp = require('fastify-plugin');
 const _ = require('lodash');
 
 const decodeToken = require('./decodeToken');
 
-const INVALID_PERMISSIONS =
-    'You must give an array of permissions to the auth function',
-  MISSING_PERMISSIONS = 'Missing authorization permissions',
-  UNAUTHORIZED = 'User UnAuthorized to access this API';
+const {
+  INVALID_PERMISSIONS,
+  MISSING_PERMISSIONS,
+  UNAUTHORIZED
+} = require('./_consts');
 
 const Authorizaton = function(request, reply, next) {
   const {
@@ -34,9 +34,10 @@ function authZ(permissions, options) {
   return Authorizaton.bind({ permissions, options });
 }
 
-function authPlugin(fastify, options, next) {
-  fastify.decorate('auth', authZ);
-  next();
-}
+// function authPlugin(fastify, options, next) {
+//   fastify.decorate('auth', authZ);
+//   next();
+// }
 
-module.exports = fp(authPlugin, { name: 'cmp-authZ' });
+// module.exports = fp(authPlugin, { name: 'cmp-authZ' });
+module.exports = { authZ };

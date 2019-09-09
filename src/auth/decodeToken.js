@@ -1,8 +1,5 @@
 const jwt = require('jsonwebtoken');
-
-const MISSING_HEADER = 'Authorization header is missing',
-  INVALID_TOKEN = 'Invalid Authorization header';
-
+const { MISSING_HEADER, INVALID_TOKEN } = require('./_consts');
 const extractTokenData = request => {
   try {
     const authToken =
