@@ -16,7 +16,7 @@ const Authorizaton = function(request, reply, next) {
   } = decodeToken.extractTokenData(request);
 
   if (!is_authorized) {
-    return reply(403).send(error);
+    return reply.code(403).send(error);
   }
   if (!_.intersection(this.permissions, user_permissions).length) {
     return reply.code(403).send(UNAUTHORIZED);
