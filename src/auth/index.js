@@ -14,8 +14,7 @@ const Authorizaton = function(request, reply, next) {
     is_authorized,
     error
   } = decodeToken.extractTokenData(request);
-  console.log(user_permissions);
-  console.log(this.permissions);
+
   if (!is_authorized) {
     return reply(403).send(error);
   }
@@ -26,7 +25,6 @@ const Authorizaton = function(request, reply, next) {
 };
 
 function authZ(permissions, options) {
-  console.log('----------', permissions);
   if (!Array.isArray(permissions)) {
     throw new Error(INVALID_PERMISSIONS);
   }
