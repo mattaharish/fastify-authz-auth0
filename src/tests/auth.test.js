@@ -41,7 +41,7 @@ describe('Token Decoding ', () => {
 describe('Authorization Function ', () => {
   test('With Valid Permissions', async () => {
     const Authorization = authZ(['read:product-types']);
-    Authorization(requestValidMock, {}, () => {});
+    expect(!Authorization(requestValidMock, {}, () => {})).toBeTruthy();
   });
 
   test('Passing permissions without array', async () => {
@@ -60,6 +60,6 @@ describe('Authorization Function ', () => {
 
   test('Unauthorized request', async () => {
     const Authorization = authZ(['read:product-type']);
-    Authorization(requestValidMock, replyMock, () => {});
+    expect(Authorization(requestValidMock, replyMock, () => {})).toBe(403);
   });
 });

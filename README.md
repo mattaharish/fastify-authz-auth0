@@ -2,7 +2,7 @@
 
 This module does not provide an authentication strategy, but it provides an utility to handle authorization in your routes, without adding overhead.
 
-Check out the complete example [here](https://github.com/fastify/fastify-auth/blob/master/example.js).
+Check out the complete example [here]().
 
 ## Install
 
