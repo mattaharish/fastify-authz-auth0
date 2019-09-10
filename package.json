@@ -1,8 +1,12 @@
 {
-  "name": "auth0-fastify-plugin",
-  "version": "1.0.3",
+  "name": "@cmp/auth0-fastify-plugin",
+  "version": "0.0.1",
   "description": "Auth0 library to get token data and extract roles and permissions",
   "main": "plugin.js",
+  "repository": {
+    "type": "git",
+    "url": "https://fala.cl/corp-marketplace/npm-packages/auth0-fastify-plugin.git"
+  },
   "jest": {
     "clearMocks": true,
     "collectCoverage": true,
@@ -48,12 +52,12 @@
     ".nyc_output/*"
   ],
   "publishConfig": {
-    "registry": "http://registry.npmjs.org/"
+    "@cmp:registry": "https://fala.cl/npm/"
   },
   "dependencies": {
+    "env-schema": "^1.0.0",
     "fastify": "^2.8.0",
     "fastify-plugin": "^1.6.0",
-    "jsonwebtoken": "^8.5.1",
-    "lodash": "^4.17.15"
+    "jsonwebtoken": "^8.5.1"
   }
 }

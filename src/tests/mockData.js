@@ -14,7 +14,7 @@ module.exports = {
     code: statusCode =>
       (() => ({
         send: () => {
-          expect(statusCode).toBe(403);
+          return statusCode
         }
       }))()
   }
