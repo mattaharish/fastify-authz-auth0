@@ -55,7 +55,6 @@
     "@cmp:registry": "https://fala.cl/npm/"
   },
   "dependencies": {
-    "env-schema": "^1.0.0",
     "fastify": "^2.8.0",
     "fastify-plugin": "^1.6.0",
     "jsonwebtoken": "^8.5.1"
