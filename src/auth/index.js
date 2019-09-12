@@ -1,5 +1,3 @@
-const _ = require('lodash');
-
 const decodeToken = require('./decodeToken');
 
 const {
@@ -18,7 +16,10 @@ const Authorizaton = function(request, reply, next) {
   if (!is_authorized) {
     return reply.code(403).send(error);
   }
-  if (!_.intersection(this.permissions, user_permissions).length) {
+
+  if (
+    !this.permissions.every(permission => user_permissions.includes(permission))
+  ) {
     return reply.code(403).send(UNAUTHORIZED);
   }
   next();

@@ -40,7 +40,7 @@ describe('Token Decoding ', () => {
 
 describe('Authorization Function ', () => {
   test('With Valid Permissions', async () => {
-    const Authorization = authZ(['read:product-types']);
+    const Authorization = authZ(['read:product-types', 'generate:reports']);
     expect(!Authorization(requestValidMock, {}, () => {})).toBeTruthy();
   });
 
