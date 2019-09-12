@@ -1,13 +1,13 @@
-# @cmp/auth0-fastify-plugin
+# fastify-authz-auth0
 
 This module does not provide an authentication strategy, but it provides an utility to handle authorization in your routes, without adding overhead.
 
-Check out the complete example [here](https://fala.cl/corp-marketplace/npm-packages/auth0-fastify-plugin/blob/extract-permissions/src/example.js).
+Check out the complete example [here](https://github.com/mattaharish/fastify-authz-auth0/blob/test/src/example.js).
 
 ## Install
 
 ```
-npm i @cmp/auth0-fastify-plugin --save
+npm i fastify-authz-auth0 --save
 ```
 
 ## Usage
@@ -18,7 +18,7 @@ Import this package in your `src/index.js` and register this plugin before regis
 'use strict';
 
 // Require the auth plugin
-const auth = require('auth0-fastify-plugin');
+const auth = require('fastify-authz-auth0');
 const routes = require('./app/v1');
 
 function create() {

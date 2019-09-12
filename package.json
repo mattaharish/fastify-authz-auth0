@@ -1,5 +1,5 @@
 {
-  "name": "auth0-fastify-plugin",
+  "name": "fastify-authz-auth0",
   "version": "1.0.4",
   "description": "Auth0 library to get token data and extract roles and permissions",
   "main": "plugin.js",
@@ -54,7 +54,6 @@
   "dependencies": {
     "fastify": "^2.8.0",
     "fastify-plugin": "^1.6.0",
-    "jsonwebtoken": "^8.5.1",
-    "lodash": "^4.17.15"
+    "jsonwebtoken": "^8.5.1"
   }
 }
